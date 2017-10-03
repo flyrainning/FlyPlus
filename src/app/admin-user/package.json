@@ -1,0 +1,8 @@
+{
+  "name": "admin-user",
+  "version": "1.0.0",
+  "description": "admin-user",
+  "main": "index.php",
+  "author": "flyrainning",
+  "license": "GPLv3"
+}

@@ -1,0 +1,64 @@
+<?php
+return array(
+	array(
+		'id'=>'admin.user',
+		'pid'=>'',
+		'order'=>'0',
+		'name'=>'用户管理',
+		'remark'=>'用户管理',
+		'default'=>false,
+		'item'=>array(
+			array(
+				'id'=>'add',
+				'name'=>'添加编辑用户',
+				'remark'=>'添加编辑用户',
+				'default'=>false,
+				'allow'=>array(
+					'page'=>array(
+						'user-add',
+						'user-modify',
+						'user-del',
+					),
+					'api'=>array(
+						'user-add',
+						'user-modify',
+						'user-del',
+					),
+				),
+			),
+		)
+
+	),
+	array(
+		'id'=>'admin.usergroup',
+		'pid'=>'',
+		'order'=>'0',
+		'name'=>'用户组管理',
+		'remark'=>'用户组管理',
+		'default'=>false,
+		'item'=>array(
+			array(
+				'id'=>'add',
+				'name'=>'添加编辑用户组',
+				'remark'=>'添加编辑用户组',
+				'default'=>false,
+				'allow'=>array(
+					'page'=>array(
+						'usergroup-add',
+						'usergroup-modify',
+						'usergroup-del',
+					),
+					'api'=>array(
+						'usergroup-add',
+						'usergroup-modify',
+						'usergroup-del',
+					),
+				),
+			),
+		)
+
+	),
+
+
+);
+?>

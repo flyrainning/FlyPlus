@@ -1,0 +1,7 @@
+{
+  "name": "admin-ability",
+  "version": "1.0.0",
+  "description": "权限组的基本处理功能",
+  "author": "flyrainning",
+  "license": "GPLv3"
+}
