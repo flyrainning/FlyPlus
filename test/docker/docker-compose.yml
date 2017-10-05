@@ -1,0 +1,39 @@
+php:
+  image: qdjl/php7
+  expose:
+    - '9000'
+  volumes:
+    - '../etc/nginx:/app/etc/nginx'
+    - '../phpMyAdmin:/app/phpMyAdmin'
+    - '../../dist:/app/wwwroot'
+  links:
+    - redis
+    - mysql
+
+web:
+  image: qdjl/nginx
+  ports:
+    - '80:80'
+    - '8080:8080'
+  links:
+    - php
+  volumes_from:
+    - 'php'
+
+
+
+redis:
+  image: redis
+  expose:
+    - '6397'
+
+
+mysql:
+  image: mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+  expose:
+    - '3306'
+  volumes:
+    - '../database:/var/lib/mysql'
+    - '../etc/mysql/conf.d:/etc/mysql/conf.d'

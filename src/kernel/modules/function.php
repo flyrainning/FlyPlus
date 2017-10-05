@@ -23,7 +23,7 @@ function add_action($key,$func,$var=array()){
   $funcvar=is_array($var)?$var:array($var);
   $GLOBALS['hooks_action'][$key][]=array($func,$funcvar);
 }
-function do_action($key,$var){
+function do_action($key){
   $res=false;
   if (isset($GLOBALS['hooks_action'][$key])){
     foreach ($GLOBALS['hooks_action'][$key] as $list) {

@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cp -R ../src ./wwwroot
-docker-compose up
+sudo docker-compose -f "./docker/docker-compose.yml" up
+sudo docker-compose -f "./docker/docker-compose.yml" rm -f

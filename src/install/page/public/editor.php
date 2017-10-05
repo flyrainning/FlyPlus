@@ -1,22 +1,6 @@
 <?php
 
-define('INSTALLROOT',dirname(__FILE__));
 
-function ClassLoader($class_name) {
-	if (file_exists(INSTALLROOT.'/class/'.$class_name.'.php')){
-		require INSTALLROOT.'/class/'.$class_name.'.php';
-	}
-}
-spl_autoload_register('ClassLoader');
-
-
-// function customError($errno, $errstr, $errfile, $errline){
-//  echo "<b>Custom error:</b> [$errno] $errstr<br />";
-//  echo " Error on line $errline in $errfile<br />";
-//  echo "Ending Script";
-//  die();
-// }
-// set_error_handler("customError");
 
  ?>
 <!DOCTYPE html>
